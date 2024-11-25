@@ -12,7 +12,7 @@ function Crm() {
         <div className=" ">
           <div className="items-center p-4 flex gap-12 justify-between">
             <h1 className="text-xl font-semibold text-[#42055F]">CRM</h1>
-            <div className="flex bg-white mr-5">
+            <div className="flex bg-white ml-4 mr-4">
               <button className="w-3 h-6 pr-10 ml-2">
                 <PiPushPinBold />
               </button>

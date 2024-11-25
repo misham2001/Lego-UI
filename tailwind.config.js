@@ -7,7 +7,11 @@ module.exports = {
     extend: {
       colors: {
         customBg: '#FDFCFE',
-         customBlue: '#3F3BE1'
+         customBlue: '#3F3BE1',
+         customPurple: '#42055F',
+         customLightPurple: '#F5EFFC',
+         customGray: '#F4F5F7',
+
       },
     },
   },
