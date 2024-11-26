@@ -73,16 +73,18 @@ function Tablelayout() {
     }),
   ];
 
-  const data = Array(10).fill({
-    title1: "Customer",
-    title2: "Item 2",
-    title3: "Item 2",
-    title4: "24 Jun 2024",
-    title5: "236 8642",
-    title6: "TAG +2",
-    title7: "Pending",
-    title8: "...",
-  });
+  const data = [
+    { title1: "Customer", title2: "Item 1", title3: "Item 2", title4: "24 Jun 2024", title5: "236 8642", title6: "TAG +2", title7: "Pending", title8: "..." },
+    { title1: "Customer", title2: "Item 1", title3: "Item 2", title4: "24 Jun 2024", title5: "236 8642", title6: "TAG +2", title7: "Pending", title8: "..." },
+    { title1: "Customer", title2: "Item 1", title3: "Item 2", title4: "24 Jun 2024", title5: "236 8642", title6: "TAG +2", title7: "Pending", title8: "..." },
+    { title1: "Customer", title2: "Item 1", title3: "Item 2", title4: "24 Jun 2024", title5: "236 8642", title6: "TAG +2", title7: "Pending", title8: "..." },
+    { title1: "Customer", title2: "Item 1", title3: "Item 2", title4: "24 Jun 2024", title5: "236 8642", title6: "TAG +2", title7: "Pending", title8: "..." },
+    { title1: "Customer", title2: "Item 1", title3: "Item 2", title4: "24 Jun 2024", title5: "236 8642", title6: "TAG +2", title7: "Pending", title8: "..." },
+    { title1: "Customer", title2: "Item 1", title3: "Item 2", title4: "24 Jun 2024", title5: "236 8642", title6: "TAG +2", title7: "Pending", title8: "..." },
+    { title1: "Customer", title2: "Item 1", title3: "Item 2", title4: "24 Jun 2024", title5: "236 8642", title6: "TAG +2", title7: "Pending", title8: "..." },
+    { title1: "Customer", title2: "Item 1", title3: "Item 2", title4: "24 Jun 2024", title5: "236 8642", title6: "TAG +2", title7: "Pending", title8: "..." },
+    { title1: "Customer", title2: "Item 1", title3: "Item 2", title4: "24 Jun 2024", title5: "236 8642", title6: "TAG +2", title7: "Pending", title8: "..." }
+  ];
 
   const table = useReactTable({
     data,
@@ -260,42 +262,33 @@ function Tablelayout() {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="table-auto w-full border-collapse border rounded-md border-gray-300">
-          <thead className="bg-gray-100">
-            {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
-                {headerGroup.headers.map((header) => (
-                  <th
-                    key={header.id}
-                    className="p-2 text-left text-sm"
-                  >
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr key={row.id} className="">
-                {row.getVisibleCells().map((cell) => (
-                  <td
-                    key={cell.id}
-                    className="border-b border-gray-300 p-2 text-left text-sm"
-                  >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <table className="table-auto w-full border-collapse border rounded-md border-gray-300">
+        <thead className="bg-gray-100">
+          {table.getHeaderGroups().map((headerGroup) => (
+            <tr key={headerGroup.id}>
+              {headerGroup.headers.map((header) => (
+                <th key={header.id} className="p-2 text-left text-sm">
+                  {header.isPlaceholder
+                    ? null
+                    : flexRender(header.column.columnDef.header, header.getContext())}
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+        <tbody>
+          {table.getRowModel().rows.map((row) => (
+            <tr key={row.id}>
+              {row.getVisibleCells().map((cell) => (
+                <td key={cell.id} className="border-b border-gray-300 p-2 text-left text-sm">
+                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
 
       <div className="flex flex-wrap justify-between items-center mt-2 gap-4">
         <div className="text-sm">
