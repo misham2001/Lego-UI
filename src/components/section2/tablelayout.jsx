@@ -105,21 +105,21 @@ function Tablelayout() {
               <option>Table view 2</option>
             </select>
           </div>
-          <div className="flex border">
+          <div className="flex border ">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 ml-2 mt-1">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
               <input 
                 type="text"
                 placeholder="Search"
-                className=" p-1 rounded w-60"
+                className=" p-1 rounded w-60 border-indigo-500/100"
               ></input>
           </div>
           
         </div>
         <div className="flex items-center space-x-2 ">
           
-          <Menu as="div" className="relative text-left">
+              <Menu as="div" className="relative text-left">
                   <div >
                     <MenuButton className="p-2 border rounded flex gap-2 bg-customGray">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
