@@ -7,8 +7,7 @@ function Crm() {
  
   return ( 
     <>
-      <div className="flex w-full bg-customBg">
-   
+      <div className="flex w-full bg-customBg">   
         <div className=" ">
           <div className="items-center p-4 flex gap-12 justify-between">
             <h1 className="text-xl font-semibold text-[#42055F]">CRM</h1>
