@@ -20,7 +20,7 @@ function Header() {
           </div>
           <div className="relative ml-4">
             <div className="absolute w-[17px] h-[17px] bg-purple-600 rounded-full"></div>
-            <div className="absolute w-[17px] h-[17px] bg-gray-300 rounded-full left-2"></div>
+            <div className="absolute w-[17px] h-[17px] bg-gray-300 rounded-full left-2 mt-1"></div>
           </div>
         </div>
 
