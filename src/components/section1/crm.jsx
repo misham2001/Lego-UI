@@ -4,14 +4,15 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import Table from '../section2/table';
 
 function Crm() {
- 
+
   return ( 
     <>
       <div className="flex w-full bg-customBg">   
         <div className=" ">
-          <div className="items-center p-4 flex gap-12 justify-between">
-            <h1 className="text-xl font-semibold text-[#42055F]">CRM</h1>
-            <div className="flex bg-white ml-4 mr-4">
+        
+          <div className="items-center p-4  ml-3 flex gap-6 justify-between flex-col">
+            <h1 className="text-xl font-semibold text-[#42055F] flex gap-5">CRM
+            <div className="flex bg-white ml-14">
               <button className="w-3 h-6 pr-10 ml-2">
                 <PiPushPinBold />
               </button>
@@ -22,7 +23,8 @@ function Crm() {
                 </svg>
               </button>
             </div>
-          </div>
+            </h1>
+            
             <NavigationMenu.Root className="relative flex h-screen bg-customBg w-full max-w-[20rem] flex-col p-4 text-gray-700">
                 <div>
                   <h5 className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-[#6B778C]">
@@ -117,6 +119,9 @@ function Crm() {
                   </NavigationMenu.Item>
                 </NavigationMenu.List>
             </NavigationMenu.Root>
+           
+          </div>
+          
            </div>
 
        
