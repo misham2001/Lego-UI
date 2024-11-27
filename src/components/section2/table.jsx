@@ -4,7 +4,6 @@ import Tablelayout from "./tablelayout";
 function Table() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8">
-
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
         <div className="flex items-center space-x-4">
           <div className="bg-purple-500 inline-block p-2 rounded-lg">
@@ -49,7 +48,6 @@ function Table() {
       <div className="overflow-x-auto rounded-lg border">
         <Tablelayout />
       </div>
-
     </div>
   );
 }

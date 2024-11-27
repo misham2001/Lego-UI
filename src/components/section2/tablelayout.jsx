@@ -1,6 +1,7 @@
 import React from "react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import * as Select from '@radix-ui/react-select';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {
   useReactTable,
   getCoreRowModel,
@@ -68,7 +69,45 @@ function Tablelayout() {
     }),
     columnHelper.accessor("title8", {
       header: () => (
-        <button><span className="text-blue-500">+Add</span> </button> 
+        <button><Menu as="div" className="relative inline-block text-left">
+        <div>
+          <MenuButton className="inline-flex w-full justify-center gap-x-1.5 ">
+            +Add 
+          </MenuButton>
+        </div>
+        <MenuItems
+          transition
+          className="absolute right-0 z-10 mt-4 w-56 origin-top-right  bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none "
+        ><h2 className="p-1 text-gray-400"> Properties</h2>
+          <div className="py-1">
+            <MenuItem>
+              <a
+                href="/"
+                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+              >
+               <input type="checkbox" className="form-checkbox" /> Name
+              </a>
+            </MenuItem>
+            <MenuItem>
+              <a
+                href="/"
+                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+              >
+              <input type="checkbox" className="form-checkbox" />  Email Id
+              </a>
+            </MenuItem>
+            <MenuItem>
+              <a
+                href="/"
+                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+              >
+              <input type="checkbox" className="form-checkbox" /> Job Title
+              </a>
+            </MenuItem> 
+            <h2 className="p-2 text-blue-600">+Add Properties</h2> 
+          </div>
+        </MenuItems>
+      </Menu> </button> 
       ),
     }),
   ];

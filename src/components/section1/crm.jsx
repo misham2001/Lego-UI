@@ -1,4 +1,4 @@
-import React, {  } from 'react';
+  import React, {  } from 'react';
 import { PiPushPinBold } from "react-icons/pi";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import Table from '../section2/table';
@@ -121,10 +121,7 @@ function Crm() {
             </NavigationMenu.Root>
            
           </div>
-          
            </div>
-
-       
         <div className='flex-1 p-4 rounded bg-white'>
           <Table />
         </div>
